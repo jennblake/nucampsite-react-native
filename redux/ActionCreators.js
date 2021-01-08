@@ -139,4 +139,15 @@ export const partnersFailed = errMess => ({
 export const addPartners = partners => ({
     type: ActionTypes.ADD_PARTNERS,
     payload: partners
-})
+});
+
+export const postFavorite = campsiteId => dispatch => {
+    setTimeout(() => {
+        dispatch(addFavorite(campsiteId));
+    }, 2000);
+};
+
+export const addFavorite = campsiteId => ({
+    type: ActionTypes.ADD_FAVORITE,
+    payload: campsiteId
+});
