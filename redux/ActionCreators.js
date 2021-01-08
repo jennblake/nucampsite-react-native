@@ -32,7 +32,6 @@ export const addComments = comments => ({
 });
 
 export const fetchCampsites = () => dispatch => {
-
     dispatch(campsitesLoading());
 
     return fetch(baseUrl + 'campsites')
@@ -140,4 +139,4 @@ export const partnersFailed = errMess => ({
 export const addPartners = partners => ({
     type: ActionTypes.ADD_PARTNERS,
     payload: partners
-});
+})
